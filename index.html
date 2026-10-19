@@ -1,0 +1,933 @@
+
+
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#101D38">
+
+<title>أَثَر | مكتبة رتال الإيمانية</title>
+
+<style>
+
+:root {
+
+  --navy: #101D38;
+
+  --navy2: #203455;
+
+  --gold: #C9A85C;
+
+  --pale-gold: #F3E9CC;
+
+  --white: #FFFFFF;
+
+  --bg: #F8F7F3;
+
+  --text: #27334A;
+
+  --muted: #777F8D;
+
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+
+  margin: 0;
+
+  font-family: Tahoma, Arial, sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+}
+
+button, select { font: inherit; }
+
+button { cursor: pointer; }
+
+header {
+
+  padding: 36px 18px 30px;
+
+  text-align: center;
+
+  color: white;
+
+  background: linear-gradient(145deg, var(--navy), var(--navy2));
+
+  border-bottom: 3px solid var(--gold);
+
+}
+
+.eyebrow { color: var(--pale-gold); font-size: 12px; letter-spacing: 2px; }
+
+.logo { font-size: 56px; color: var(--gold); margin: 12px 0; }
+
+header p { line-height: 1.9; }
+
+.gift {
+
+  display: inline-block;
+
+  border: 1px solid var(--gold);
+
+  color: var(--pale-gold);
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+
+}
+
+nav {
+
+  display: flex;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  background: white;
+
+  border-bottom: 1px solid #E7E0D0;
+
+}
+
+nav button {
+
+  background: white;
+
+  color: var(--navy);
+
+  border: 1px solid #E6DCC4;
+
+  padding: 9px 13px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+}
+
+nav button:hover, nav button:focus {
+
+  background: var(--navy);
+
+  color: white;
+
+}
+
+main { max-width: 760px; margin: 28px auto; padding: 0 16px; }
+
+.hero { text-align: center; margin: 25px 0 30px; }
+
+h2 { color: var(--navy); }
+
+.hero p, .muted { color: var(--muted); line-height: 2; font-size: 14px; }
+
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; }
+
+.card {
+
+  background: white;
+
+  border: 1px solid #E6DDCA;
+
+  border-radius: 17px;
+
+  padding: 21px 15px;
+
+  margin-bottom: 14px;
+
+  box-shadow: 0 5px 18px #101D3808;
+
+}
+
+.card h3 { color: var(--navy); margin: 8px 0; }
+
+.symbol {
+
+  display: inline-flex;
+
+  width: 45px;
+
+  height: 45px;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--navy);
+
+  color: var(--gold);
+
+  font-size: 23px;
+
+}
+
+.primary, .secondary {
+
+  border-radius: 10px;
+
+  padding: 12px 16px;
+
+  border: 1px solid var(--gold);
+
+  background: var(--navy);
+
+  color: white;
+
+}
+
+.secondary {
+
+  background: white;
+
+  color: var(--navy);
+
+}
+
+.primary:hover { background: var(--navy2); }
+
+.full { width: 100%; }
+
+#dua {
+
+  background: #F8F5EC;
+
+  border-right: 3px solid var(--gold);
+
+  border-radius: 9px;
+
+  padding: 18px 14px;
+
+  line-height: 2.2;
+
+  color: var(--navy);
+
+  min-height: 60px;
+
+}
+
+.small { font-size: 12px; color: var(--muted); line-height: 1.9; }
+
+.page-title { text-align: center; margin-bottom: 20px; }
+
+.hidden { display: none !important; }
+
+.verse {
+
+  font-family: "Traditional Arabic", Tahoma, serif;
+
+  font-size: 25px;
+
+  line-height: 2.2;
+
+  text-align: justify;
+
+  color: var(--navy);
+
+  background: white;
+
+  border: 1px solid #E6DDCA;
+
+  padding: 20px;
+
+  border-radius: 13px;
+
+  margin: 12px 0;
+
+}
+
+.verse-number { color: #A18139; font-size: 16px; }
+
+select, input {
+
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid #D9CFBA;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: var(--navy);
+
+  margin: 8px 0;
+
+}
+
+.row { display: flex; gap: 9px; align-items: center; }
+
+.row > * { min-width: 0; }
+
+.row button { flex: 1; }
+
+.notice {
+
+  background: #F3E9CC;
+
+  padding: 13px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  line-height: 2;
+
+}
+
+footer {
+
+  text-align: center;
+
+  background: var(--navy);
+
+  color: white;
+
+  padding: 26px 15px;
+
+  line-height: 2;
+
+  margin-top: 45px;
+
+}
+
+footer span { color: var(--gold); }
+
+@media (max-width: 440px) {
+
+  .grid { gap: 9px; }
+
+  .card { padding: 16px 11px; }
+
+  .card h3 { font-size: 15px; }
+
+  .logo { font-size: 49px; }
+
+  nav button { font-size: 12px; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <p class="eyebrow">مَكْتَبَةٌ لِلذِّكْرِ وَالطُّمَأْنِينَة</p>
+
+  <div class="logo">أَثَر</div>
+
+  <p>مساحة صغيرة، لأشياء عظيمة.</p>
+
+  <div class="gift">هدية من تمارا إلى رتال ♡</div>
+
+</header>
+
+<nav>
+
+  <button onclick="home()">الرئيسية</button>
+
+  <button onclick="showPage('adhkar')">الأذكار</button>
+
+  <button onclick="showPage('quran')">القرآن الكريم</button>
+
+  <button onclick="showPage('duas')">الأدعية</button>
+
+</nav>
+
+<main>
+
+  <section id="homePage">
+
+    <div class="hero">
+
+      <h2>أهلًا بكِ في أَثَر</h2>
+
+      <p>هنا تجدين ذكرًا يطمئن قلبكِ، ودعاءً يرافق يومكِ، وآياتٍ تنير دربكِ.</p>
+
+    </div>
+
+    <div class="card" style="text-align:center">
+
+      <div class="symbol">♡</div>
+
+      <h2>دعاء لكِ</h2>
+
+      <p class="muted">اضغطي الزر، واكتشفي دعاءً جديدًا في كل مرة.</p>
+
+      <button class="primary" onclick="newDua()">أهدني دعاءً ✨</button>
+
+      <p id="dua" aria-live="polite">اللهم اكتب لي الخير والطمأنينة.</p>
+
+      <p class="small" id="duaCount">من مجموعة تضم ٦٠ دعاءً</p>
+
+    </div>
+
+    <h2 style="text-align:center">أبواب أَثَر</h2>
+
+    <div class="grid">
+
+      <div class="card" style="text-align:center">
+
+        <div class="symbol">☼</div>
+
+        <h3>أذكار الصباح</h3>
+
+        <button class="secondary full" onclick="openDhikr('morning')">افتحي القسم</button>
+
+      </div>
+
+      <div class="card" style="text-align:center">
+
+        <div class="symbol">☀</div>
+
+        <h3>أذكار المساء</h3>
+
+        <button class="secondary full" onclick="openDhikr('evening')">افتحي القسم</button>
+
+      </div>
+
+      <div class="card" style="text-align:center">
+
+        <div class="symbol">☾</div>
+
+        <h3>أذكار النوم</h3>
+
+        <button class="secondary full" onclick="openDhikr('sleep')">افتحي القسم</button>
+
+      </div>
+
+      <div class="card" style="text-align:center">
+
+        <div class="symbol">۞</div>
+
+        <h3>القرآن الكريم</h3>
+
+        <button class="secondary full" onclick="showPage('quran')">تصفحي القرآن</button>
+
+      </div>
+
+    </div>
+
+    <div class="card" style="text-align:center">
+
+      <h3>كل يوم، أثر جديد 🤍</h3>
+
+      <p class="muted">مساحة تجمع الذكر والدعاء وآيات القرآن في مكان واحد.</p>
+
+    </div>
+
+  </section>
+
+  <section id="adhkarPage" class="hidden">
+
+    <div class="page-title">
+
+      <h2>قسم الأذكار</h2>
+
+      <p class="muted">اختاري القسم الذي تريدين قراءته.</p>
+
+    </div>
+
+    <div id="dhikrCategories" class="grid"></div>
+
+    <div id="dhikrDetail" class="hidden">
+
+      <button class="secondary" onclick="backToDhikr()">← جميع الأقسام</button>
+
+      <h2 id="dhikrTitle"></h2>
+
+      <div id="dhikrContent"></div>
+
+    </div>
+
+  </section>
+
+  <section id="quranPage" class="hidden">
+
+    <div class="page-title">
+
+      <h2>القرآن الكريم</h2>
+
+      <p class="muted">تصفحي سور القرآن الكريم وآياتها.</p>
+
+    </div>
+
+    <div class="card">
+
+      <label for="surahSelect">اختاري السورة</label>
+
+      <select id="surahSelect">
+
+        <option value="">جارٍ تحميل أسماء السور...</option>
+
+      </select>
+
+      <button class="primary full" onclick="loadSurah()">عرض السورة</button>
+
+      <p class="small">يتطلب هذا القسم اتصالًا بالإنترنت لجلب النص القرآني.</p>
+
+    </div>
+
+    <div id="quranStatus" class="muted" aria-live="polite"></div>
+
+    <div id="surahInfo"></div>
+
+    <div id="verses"></div>
+
+  </section>
+
+  <section id="duasPage" class="hidden">
+
+    <div class="page-title">
+
+      <h2>أدعية من القلب</h2>
+
+      <p class="muted">ستون دعاءً، يظهر لكِ منها دعاء جديد عند كل ضغطة.</p>
+
+    </div>
+
+    <div class="card" style="text-align:center">
+
+      <div id="duaLarge" class="verse" style="text-align:center;font-size:22px">
+
+        اضغطي الزر ليظهر لكِ دعاء.
+
+      </div>
+
+      <button class="primary full" onclick="newDua(true)">دعاء جديد ♡</button>
+
+      <p id="duaCountLarge" class="small"></p>
+
+    </div>
+
+    <div class="notice">
+
+      هذه الأدعية صياغات دعائية عامة، وليست جميعها أحاديث نبوية.
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+
+  صُنِع بحب، ليبقى أثره جميلًا <span>♡</span><br>
+
+  <span>أَثَر — من تمارا إلى رتال</span>
+
+</footer>
+
+<script>
+
+const duas = [
+
+"اللهم اغفر لي ذنبي، واستر عيبي، وتقبّل توبتي.",
+
+"اللهم ارزقني راحة البال، وطمأنينة القلب، وسكينة الروح.",
+
+"اللهم وفّقني لما تحب وترضى، واكتب لي الخير حيث كان.",
+
+"اللهم احفظني وأهلي وأحبتي من كل سوء ومكروه.",
+
+"اللهم ارزقني رزقًا حلالًا طيبًا مباركًا فيه.",
+
+"اللهم اجبر خاطري جبرًا يليق بكرمك، وعوّضني خيرًا.",
+
+"اللهم اشرح صدري، ويسّر أمري، واحلل عقدة من لساني.",
+
+"اللهم ارزقني حسن الخاتمة، والفردوس الأعلى من الجنة.",
+
+"اللهم اشفِ كل مريض، وارحم كل ميت، وفرّج همّ كل مهموم.",
+
+"اللهم أبعد عني الحزن والهمّ والضيق، واملأ قلبي رضا.",
+
+"اللهم اجعلني من أهل القرآن الذين هم أهلك وخاصتك.",
+
+"اللهم ارزقني برّ والديّ، وأطل عمرهما على طاعتك وعافيتك.",
+
+"اللهم احفظ أحبتي بعينك التي لا تنام، واكتب لهم السعادة.",
+
+"اللهم ارزقني علمًا نافعًا، وفهمًا واسعًا، ونجاحًا مباركًا.",
+
+"اللهم يسّر لي كل عسير، وحقّق لي ما فيه خير لي.",
+
+"اللهم طهّر قلبي من الحقد والحسد، ولساني من الغيبة والكذب.",
+
+"اللهم ارزقني صحبة صالحة تعينني على الخير وتقرّبني إليك.",
+
+"اللهم اجعل لي من كل همّ فرجًا، ومن كل ضيق مخرجًا.",
+
+"اللهم استجب دعواتي، وحقّق أمنياتي إن كانت خيرًا لي.",
+
+"اللهم بارك لي في وقتي وعمري وصحتي وأهلي.",
+
+"اللهم ارزقني حبك، وحب من يحبك، وحب كل عمل يقرّبني إليك.",
+
+"اللهم اكفني شرّ ما أخاف، واحفظني من كل أذى.",
+
+"اللهم ارزقني قلبًا شاكرًا، ولسانًا ذاكرًا، ونفسًا مطمئنة.",
+
+"اللهم لا تجعل الدنيا أكبر همّي، ولا مبلغ علمي.",
+
+"اللهم ارزقني العفو والعافية في الدنيا والآخرة.",
+
+"اللهم اجعل القادم من حياتي أجمل مما مضى، واكتب لي الخير دائمًا.",
+
+"اللهم ارزقني الصبر عند البلاء، والشكر عند النعماء، والرضا بالقضاء.",
+
+"اللهم احفظ لي نعمي من الزوال، وأدم عليّ فضلك وإحسانك.",
+
+"اللهم أصلح لي ديني ودنياي وآخرتي، ولا تكلني إلى نفسي طرفة عين.",
+
+"اللهم اجمعني بمن أحب في جنات النعيم، واجعل لقاءنا أبديًا في الفردوس الأعلى.",
+
+"اللهم ارزقني لذّة القرب منك، وحلاوة مناجاتك، وصدق التوكل عليك.",
+
+"اللهم نوّر بصيرتي، واهدِ قلبي، وسدّد خطاي.",
+
+"اللهم ارزقني فرحًا ينسيني مرارة الأيام، وعوضًا يليق بكرمك.",
+
+"اللهم اجعلني مباركة أينما كنت، وانفع بي عبادك.",
+
+"اللهم ارزقني من الأقدار أجملها، ومن الأرزاق أوسعها، ومن العافية أكملها.",
+
+"اللهم لا تدع لي ذنبًا إلا غفرته، ولا همًا إلا فرّجته، ولا حاجةً فيها خير لي إلا قضيتها.",
+
+"اللهم أعنّي على ذكرك وشكرك وحسن عبادتك.",
+
+"اللهم ارزقني الحكمة في القول، والسداد في الفعل، والإخلاص في العمل.",
+
+"اللهم اجعلني ممن طال عمره وحسن عمله.",
+
+"اللهم ارزقني يقينًا يهوّن عليّ مصائب الدنيا.",
+
+"اللهم اجعل القرآن ربيع قلبي، ونور صدري، وجلاء حزني.",
+
+"اللهم ارزقني عفوًا منك، ورضوانًا، ومغفرةً لا يعقبها ذنب.",
+
+"اللهم جنّبني الفتن ما ظهر منها وما بطن.",
+
+"اللهم ارزقني من الخير فوق ما أرجو، واصرف عني من الشر فوق ما أحذر.",
+
+"اللهم ألهمني رشدي، وقني شر نفسي.",
+
+"اللهم اجعل لي نصيبًا من كل خير تنزله، وفضلًا من كل رزق تقسمه.",
+
+"اللهم ارزقني قلبًا لا يقسو، وعينًا لا تدمع إلا من خشيتك.",
+
+"اللهم اجعلني خفيفة الروح، طيبة الأثر، جميلة الذكر بين خلقك.",
+
+"اللهم ارزقني الستر الجميل، واللطف الخفي، والفرج القريب.",
+
+"اللهم احفظني من خيبة الأمل، ومن سوء الظن، ومن ضيق الصدر.",
+
+"اللهم ألّف بين قلوبنا، وأصلح ذات بيننا، واهدنا سبل السلام.",
+
+"اللهم ارزقني صحبةً صادقةً لا تتغير بالمواقف، ولا تفسدها الأيام.",
+
+"اللهم أدم المودة بيني وبين من أحب، واجعل علاقتنا قائمةً على الخير والرضا.",
+
+"اللهم ارزق أحبتي سعادةً لا تنقطع، وراحةً لا تزول، وأمانًا لا يخالطه خوف.",
+
+"اللهم اجعل لي في كل خطوة توفيقًا، وفي كل قرار رشدًا، وفي كل طريق بركة.",
+
+"اللهم علّمني أن أرضى بما قسمت، وأحسن الظن بما اخترت.",
+
+"اللهم ارزقني لسانًا صادقًا، وقلبًا سليمًا، وعملًا متقبلًا.",
+
+"اللهم اجعل قبري روضةً من رياض الجنة، وآنس وحشتي يوم ألقاك.",
+
+"اللهم ثبّت قلبي على دينك، ولا تزغه بعد إذ هديتني.",
+
+"اللهم اختم لي بخير، واجعل آخر كلامي من الدنيا شهادة أن لا إله إلا الله."
+
+];
+
+let remaining = [];
+
+let shownCount = 0;
+
+function newDua(fromDuasPage = false) {
+
+  if (remaining.length === 0) {
+
+    remaining = duas.map((_, i) => i);
+
+    for (let i = remaining.length - 1; i > 0; i--) {
+
+      const j = Math.floor(Math.random() * (i + 1));
+
+      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+
+    }
+
+  }
+
+  const index = remaining.pop();
+
+  shownCount++;
+
+  const text = duas[index];
+
+  document.getElementById("dua").textContent = text;
+
+  document.getElementById("duaCount").textContent =
+
+    "الدعاء " + (61 - remaining.length) + " من ٦٠ في هذه الدورة";
+
+  document.getElementById("duaLarge").textContent = text;
+
+  document.getElementById("duaCountLarge").textContent =
+
+    "ظهر " + shownCount + " دعاءً منذ فتح الصفحة.";
+
+}
+
+const categories = [
+
+  {id:"morning", title:"أذكار الصباح", icon:"☼", desc:"أذكار بداية اليوم"},
+
+  {id:"evening", title:"أذكار المساء", icon:"☀", desc:"أذكار المساء"},
+
+  {id:"sleep", title:"أذكار النوم", icon:"☾", desc:"أذكار ما قبل النوم"},
+
+  {id:"wake", title:"دعاء الاستيقاظ", icon:"☀", desc:"ذكر الاستيقاظ من النوم"},
+
+  {id:"travel", title:"دعاء السفر", icon:"✈", desc:"دعاء الخروج والسفر"},
+
+  {id:"distress", title:"أدعية الكرب والهم", icon:"♡", desc:"أدعية من القرآن والسنة"},
+
+  {id:"prayer", title:"أذكار بعد الصلاة", icon:"۞", desc:"الأذكار بعد الصلوات المفروضة"},
+
+  {id:"kursi", title:"آية الكرسي", icon:"۞", desc:"آية عظيمة من سورة البقرة"},
+
+  {id:"mulk", title:"سورة الملك قبل النوم", icon:"☾", desc:"سورة الملك وفضلها الثابت"}
+
+];
+
+function showPage(page) {
+
+  ["homePage","adhkarPage","quranPage","duasPage"].forEach(id =>
+
+    document.getElementById(id).classList.add("hidden")
+
+  );
+
+  document.getElementById({
+
+    home:"homePage", adhkar:"adhkarPage",
+
+    quran:"quranPage", duas:"duasPage"
+
+  }[page]).classList.remove("hidden");
+
+  window.scrollTo({top:0, behavior:"smooth"});
+
+}
+
+function home() { showPage("home"); }
+
+function renderCategories() {
+
+  document.getElementById("dhikrCategories").innerHTML = categories.map(c => `
+
+    <div class="card" style="text-align:center">
+
+      <div class="symbol">${c.icon}</div>
+
+      <h3>${c.title}</h3>
+
+      <p class="small">${c.desc}</p>
+
+      <button class="secondary full" onclick="openDhikr('${c.id}')">افتحي القسم</button>
+
+    </div>
+
+  `).join("");
+
+}
+
+function openDhikr(id) {
+
+  showPage("adhkar");
+
+  document.getElementById("dhikrCategories").classList.add("hidden");
+
+  document.getElementById("dhikrDetail").classList.remove("hidden");
+
+  const c = categories.find(x => x.id === id);
+
+  document.getElementById("dhikrTitle").textContent = c ? c.title : "الأذكار";
+
+  document.getElementById("dhikrContent").innerHTML = `
+
+    <div class="card">
+
+      <p>${c ? c.desc : ""}</p>
+
+      <div class="notice">
+
+        سنضيف نصوص هذا القسم وأعداد التكرار وفضائله مع التحقق من المصادر الشرعية.
+
+        لن نعرض نصًا منسوبًا إلى السنة أو فضلًا شرعيًا دون توثيق.
+
+      </div>
+
+      ${id === "kursi" ? '<button class="primary full" onclick="showPage(\\'quran\\');selectSurah(2)">افتحي سورة البقرة في القرآن</button>' : ""}
+
+      ${id === "mulk" ? '<button class="primary full" onclick="showPage(\\'quran\\');selectSurah(67)">افتحي سورة الملك</button>' : ""}
+
+    </div>`;
+
+}
+
+function backToDhikr() {
+
+  document.getElementById("dhikrDetail").classList.add("hidden");
+
+  document.getElementById("dhikrCategories").classList.remove("hidden");
+
+}
+
+let surahs = [];
+
+async function initQuran() {
+
+  const select = document.getElementById("surahSelect");
+
+  try {
+
+    const response = await fetch("https://api.alquran.cloud/v1/surah");
+
+    if (!response.ok) throw new Error("تعذّر الاتصال بالمصدر");
+
+    const data = await response.json();
+
+    if (data.code !== 200) throw new Error("تعذّر تحميل السور");
+
+    surahs = data.data;
+
+    select.innerHTML = surahs.map(s =>
+
+      `<option value="${s.number}">${s.number}. ${s.name} — ${s.englishName}</option>`
+
+    ).join("");
+
+    document.getElementById("quranStatus").textContent =
+
+      "اختاري أي سورة من سور القرآن الكريم الـ١١٤.";
+
+  } catch (error) {
+
+    select.innerHTML = '<option value="">تعذّر تحميل السور</option>';
+
+    document.getElementById("quranStatus").textContent =
+
+      "تحققي من اتصال الإنترنت ثم أعيدي تحميل الصفحة.";
+
+  }
+
+}
+
+function selectSurah(n) {
+
+  const select = document.getElementById("surahSelect");
+
+  select.value = String(n);
+
+  loadSurah();
+
+}
+
+async function loadSurah() {
+
+  const n = document.getElementById("surahSelect").value;
+
+  if (!n) return;
+
+  const status = document.getElementById("quranStatus");
+
+  const info = document.getElementById("surahInfo");
+
+  const verses = document.getElementById("verses");
+
+  status.textContent = "جارٍ تحميل السورة...";
+
+  info.innerHTML = "";
+
+  verses.innerHTML = "";
+
+  try {
+
+    const response = await fetch(`https://api.alquran.cloud/v1/surah/${n}`);
+
+    if (!response.ok) throw new Error("تعذّر الاتصال");
+
+    const result = await response.json();
+
+    if (result.code !== 200) throw new Error("تعذّر تحميل السورة");
+
+    const s = result.data;
+
+    info.innerHTML = `<div class="card" style="text-align:center">
+
+      <h2>${s.name}</h2>
+
+      <p class="muted">${s.revelationType === "Meccan" ? "مكية" : "مدنية"} • ${s.numberOfAyahs} آية</p>
+
+    </div>`;
+
+    verses.innerHTML = s.ayahs.map(a =>
+
+      `<div class="verse">${a.text} <span class="verse-number">﴿${a.numberInSurah}﴾</span></div>`
+
+    ).join("");
+
+    status.textContent = "انتهى تحميل السورة.";
+
+    window.scrollTo({top:0, behavior:"smooth"});
+
+  } catch (error) {
+
+    status.textContent = "تعذّر تحميل السورة. تحققي من الإنترنت وحاولي مرة أخرى.";
+
+  }
+
+}
+
+renderCategories();
+
+initQuran();
+
+</script>
+
+</body>
+
+</html>
