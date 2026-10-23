@@ -260,7 +260,33 @@ main { max-width: 820px; margin: auto; padding: 20px 15px 55px; }
 
 }
 
-footer { text-align: center; padding: 22px; color: var(--muted); font-size: 13px; }
+.personal-message {
+  background: #f7f1e4;
+  border-right: 3px solid var(--gold);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--navy);
+}
+
+.personal-message strong {
+  color: #987b42;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-personal {
+  display: inline-block;
+  margin-top: 7px;
+  color: #987b42;
+  font-size: 14px;
+}
 
 </style>
 
@@ -270,13 +296,21 @@ footer { text-align: center; padding: 22px; color: var(--muted); font-size: 13px
 
 <section id="home" class="hero">
 
-  <div class="eyebrow">مساحة للروح والقلب</div>
+  <div class="eyebrow">مرحبًا رتال 🌿</div>
 
   <h1>أَثَر</h1>
 
-  <p class="subtitle">مكتبة للذكر والطمأنينة</p>
+  
+<div class="eyebrow">مرحبًا رتال 🌿</div>
 
-  <p>مساحة صغيرة لأشياء عظيمة</p>
+<h1>أَثَر</h1>
+
+<p class="subtitle">مكان صغير صُمّم لكِ</p>
+
+<p>خذي نفسًا هادئًا…<br>
+
+وخلي هذا المكان لكِ 🤍</p>
+  
 
   <button class="primary" onclick="showLibrary()">ادخل إلى المكتبة ←</button>
 
@@ -324,7 +358,15 @@ footer { text-align: center; padding: 22px; color: var(--muted); font-size: 13px
 
   </main>
 
-  <footer>أَثَر · اللهم اجعل هذا العمل نافعًا ومباركًا</footer>
+  <footer>
+
+  أَثَر · اللهم اجعل هذا العمل نافعًا ومباركًا
+
+  <br>
+
+  <span class="footer-personal">صُنع بحب لـ رتال ♡</span>
+
+</footer>
 
 </section>
 
